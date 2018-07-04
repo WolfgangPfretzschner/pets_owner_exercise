@@ -3,6 +3,7 @@
 <ul>
     <% @pets.each do |pet| %>
     <li>
-      <%= link_to pet.name, path_to(pet) %>
+      <%= link_to pet.name, pet_path(pet) %>
     </li>
+    <% end %>
 </ul>

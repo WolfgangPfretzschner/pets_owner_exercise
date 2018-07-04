@@ -2,7 +2,7 @@ class PetsController < ApplicationController
   before_action :set_pet, only: [:show, :edit, :update, :destroy]
 
   def index
-    @pets = Pet.all(pet_params)
+    @pets = Pet.all
   end
 
   def show
@@ -19,15 +19,16 @@ class PetsController < ApplicationController
     else
       render :new
     end
+
   end
 
   def edit
   end
 
   def update
-    @pet = Pet.update(pet_params)
+    @pet.update(pet_params)
     if @pet.save
-      redirect_to path_to(@pet)
+      redirect_to pet_path(@pet)
     else
       render :edit
     end

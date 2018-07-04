@@ -3,9 +3,10 @@
 <%= form_for @pet do |f| %>
 <%= f.label "name:" %>
 <%= f.text_field :name %><br />
-<%= f.label "Pet type:" %>
-<%= f.text_field :pet_type %><br />
+<%# took out f.lable and text area for the pet_type as per deliverables %>
+
 <%= f.label "Owner:" %>
 <%= f.collection_select :owner_id, Owner.all, :id, :name%>
   <%= f.submit %>
 <% end %>
+<%#  %>

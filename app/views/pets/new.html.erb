@@ -6,6 +6,6 @@
 <%= f.label "Pet type:" %>
 <%= f.text_field :pet_type %><br />
 <%= f.label "Owner:" %>
-<%= f.collection_select :owner_id, Owner.all, :id, :name%>
+<%= f.collection_select :owner_id, Owner.all, :id, :name%><br />
   <%= f.submit %>
 <% end %>
