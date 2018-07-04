@@ -3,6 +3,9 @@ class PetsController < ApplicationController
 
   def index
     @pets = Pet.all
+    if params[:search]
+      @pets = Pet.search(params[:search])
+    end
   end
 
   def show
