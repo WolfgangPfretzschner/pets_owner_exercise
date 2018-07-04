@@ -2,7 +2,7 @@ class CreatePets < ActiveRecord::Migration[5.2]
   def change
     create_table :pets do |t|
       t.string :name
-      t.stirng :pet_type
+      t.string :pet_type
       t.references :owner, foreign_key: true
 
       t.timestamps

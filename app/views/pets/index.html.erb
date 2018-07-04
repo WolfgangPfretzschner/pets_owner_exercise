@@ -1,1 +1,8 @@
 <h1>Index Pets</h1>
+
+<ul>
+    <% @pets.each do |pet| %>
+    <li>
+      <%= link_to pet.name, path_to(pet) %>
+    </li>
+</ul>

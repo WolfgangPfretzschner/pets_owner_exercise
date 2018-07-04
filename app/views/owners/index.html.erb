@@ -1,1 +1,9 @@
-<h1>Index owners</h1>
+<h1>Index Owners</h1>
+
+<ul>
+  <% @owners.each do |owner|  %>
+    <li>
+      <%= link_to owner.name, owner_path(owner) %>
+    </li>
+    <% end %>
+</ul>
