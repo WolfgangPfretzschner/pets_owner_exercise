@@ -2,4 +2,5 @@
 <h2><%= @pet.pet_type %></h2>
 <%= link_to "Edit", edit_pet_path(@pet) %> <br />
 <%= link_to "Take me to my owner", owner_path(@pet.owner) %><br />
-<%= link_to "<=  Back", owners_path %>
+<%= link_to "<=  Back", owners_path %><br />
+<%= link_to "Delete",pet_path(@pet), method: 'delete' %>

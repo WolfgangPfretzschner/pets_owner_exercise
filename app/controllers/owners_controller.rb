@@ -5,6 +5,9 @@ class OwnersController < ApplicationController
     @owners = Owner.all
   end
 
+  def show
+  end
+
   def new
     @owner = Owner.new
   end
@@ -16,9 +19,6 @@ class OwnersController < ApplicationController
     else
       render :new
     end
-  end
-
-  def show
   end
 
   def edit
@@ -47,4 +47,7 @@ class OwnersController < ApplicationController
   def owner_params
     params.require(:owner).permit(:name)
   end
+
 end
+
+allm
